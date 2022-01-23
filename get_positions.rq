@@ -1,0 +1,12 @@
+SELECT DISTINCT ?persona ?startMandato ?fineMandato
+WHERE {
+?persona ocd:rif_mandatoCamera ?mandato; a foaf:Person.
+
+?d a ocd:deputato;
+ocd:rif_leg <http://dati.camera.it/ocd/legislatura.rdf/repubblica_17>;
+ocd:rif_mandatoCamera ?mandato.
+
+## mandato
+?mandato ocd:startDate ?startMandato.
+?mandato ocd:endDate ?fineMandato.
+}

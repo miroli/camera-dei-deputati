@@ -1,0 +1,9 @@
+SELECT ?item ?code ?st WHERE {
+  ?item wdt:P31 wd:Q5 ;
+        wdt:P1341 ?code ;
+        p:P39 ?st .
+  ?st ps:P39 wd:Q18558478 ;
+      pq:P2937 wd:Q5487948 .
+  MINUS { ?st pq:P580 [] }
+  MINUS { ?st pq:P582 [] }
+}
